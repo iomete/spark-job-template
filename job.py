@@ -15,6 +15,12 @@ This is a sample job that:
 This sample is only for demonstration purposes. Feel free to replace the code with your own.
 """
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 spark = SparkSession.builder.appName(JOB_NAME).getOrCreate()
 logger = get_spark_logger(spark=spark)
 

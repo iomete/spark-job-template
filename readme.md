@@ -25,7 +25,7 @@ The project is composed of the following folders/files:
   - `requirements-dev.txt`: contains the list of python packages to install for development
   - `requirements.txt`: contains the list of python packages to install for production. This requirements file is used to build the Docker image
   - `Dockerfile`: contains the Dockerfile to build the spark job image
-- `spark-conf/`: contains the spark configuration files for development environment
+- `spark_conf/`: contains the spark configuration files for development environment
   - `spark-defaults.conf`: contains the spark configuration
   - `log4j.properties`: contains the log4j configuration for the PySpark job. This file is used to configure the logging level of the job
 - `test_data/`: contains the test data for the job unit/integration tests
@@ -45,11 +45,6 @@ source .env/bin/activate
 make install-dev-requirements
 ```
 
-Also, set the `SPARK_CONF_DIR` environment variable to point to the `spark_conf` folder. This is needed to load the spark configuration files for local development:
-```bash
-export SPARK_CONF_DIR=./spark_conf
-```
-
 Then, you can run the job:
 
 ```bash
@@ -58,7 +53,7 @@ python job.py
 
 ## How to run the tests
 
-> Note: Make sure you have installed the dependencies, and exported the `SPARK_CONF_DIR` environment variable as described in the previous section.
+> Note: Make sure you have installed the dependencies as described in the previous section.
 
 To run the tests, you can use the `pytest` command:
 ```bash
