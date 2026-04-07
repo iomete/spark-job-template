@@ -1,9 +1,11 @@
 docker_image := iomete/sample-job
 docker_tag := 1.0.0
 
-export SPARK_CONF_DIR=./spark_conf
+-include .env
+export
 
 install-dev-requirements:
+	cp -n .env.example .env || true
 	pip install -r infra/requirements-dev.txt
 
 run-job:
