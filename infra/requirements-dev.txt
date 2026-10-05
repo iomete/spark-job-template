@@ -2,5 +2,5 @@ pyspark-iomete==0.0.3
 
 # dev dependencies
 pyspark==3.5.9
-pytest==9.0.3
+pytest==9.1.1
 python-dotenv==1.2.4
