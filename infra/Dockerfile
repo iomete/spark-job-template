@@ -1,5 +1,5 @@
 # Choose the IOMETE managed Spark image as the base image
-FROM iomete.azurecr.io/iomete/spark-py:3.5.7-latest
+FROM iomete.azurecr.io/iomete/spark-py:3.5.9-latest
 
 # Set the working directory to /app
 WORKDIR "/app"
